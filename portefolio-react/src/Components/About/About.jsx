@@ -1,12 +1,16 @@
 import React from "react";
 import './About.css'
 import profile_img from '../../assets/profile_img.svg'
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
+    const {t} = useTranslation()
+
     return (
         <div id="about" className="about">
             <div className="about-title">
-                <h1>About Me</h1>
+                <h1>{t('about.title')}</h1>
             </div>
             <div className="about-section">
                 <div className="about-left">
@@ -14,8 +18,8 @@ const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-para">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat sollicitudin ligula, nec tristique nisi suscipit quis. Duis purus metus, laoreet ut ipsum id, ultricies varius felis. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat sollicitudin ligula, nec tristique nisi suscipit quis. Duis purus metus, laoreet ut ipsum id, ultricies varius felis. </p>
+                        <p>{t('about.para1')}</p>
+                        <p>{t('about.para2')}</p>
                     </div>
                     <div className="about-skills">
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{width: "50%"}}/></div>
@@ -27,18 +31,18 @@ const About = () => {
             </div>
             <div className="about-achivements">
                 <div className="about-achivement">
-                    <h1>xdd</h1>
-                    <p>years of experience</p>
+                    <h1>+3</h1>
+                    <p>{t('about.experience')}</p>
+                </div>
+                <hr />
+                <div className="about-achivement">
+                    <h1>+10</h1>
+                    <p>{t("about.project")}</p>
                 </div>
                 <hr />
                 <div className="about-achivement">
                     <h1>x</h1>
-                    <p>Projects completed</p>
-                </div>
-                <hr />
-                <div className="about-achivement">
-                    <h1>x</h1>
-                    <p>Client satisfected</p>
+                    <p>{t('about.client')}</p>
                 </div>
             </div>
         </div>

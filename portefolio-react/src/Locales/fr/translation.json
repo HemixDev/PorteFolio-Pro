@@ -1,0 +1,29 @@
+{
+    "navbar": {
+        "home": "Accueil",
+        "about me": "A propos",
+        "services": "Services",
+        "contact": "Contacte",
+        "portfolio": "Portfolio",
+        "contact-button": "Me contacter"
+    },
+    "hero": {
+        "welcome": "Bonjours à tous, je suis HemixDev,",
+        "under-pseudo": " jeune développeur de Marseille.",
+        "mission": "Ma mission est de rendre la création de votre site web ou application aussi simple et collaborative que possible. Je suis ici pour vous accompagner à chaque étape, en travaillant main dans la main avec vous pour réaliser le projet numérique de vos rêves. Avec moi, vous bénéficierez d'un processus fluide, efficace et personnalisé pour transformer vos idées en réalité.",
+        "contact": "Me Contacter",
+        "resume": "Mon CV"
+    },
+    "about": {
+        "title": "A mon propos",
+        "para1": "Je m'appelle Maximilien, j'ai 24 ans et j'habite vers Marseille. Passionné par le numérique, j'ai choisi de m'orienter vers le développement web et d'app. Actuellement étudiant, je me suis déjà lancé en tant que développeur freelance pour mettre mes compétences à votre profits",
+        "para2": "Je me suis spécialisé dans la stack MERN, en mettant particulièrement l'accent sur React.js. J'ai également réalisé des projets en PHP, Java, Flutter et Python.",
+        "experience": "Années d'experiences",
+        "project": "Projets complétait",
+        "client": "Clients satisfait"
+    },
+    "services": {
+        "title": "Mes services",
+        "readmore": "En lire plus"
+    }
+}

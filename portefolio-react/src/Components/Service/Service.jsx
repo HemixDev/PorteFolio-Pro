@@ -1,14 +1,17 @@
 import React from "react";
 import './Service.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
 import Services_Data from '../../assets/services_data'
 import arrow_icon from '../../assets/arrow_icon.svg'
+import { useTranslation } from "react-i18next";
 
 const Service = () => {
+
+    const {t} = useTranslation()
+
     return (
         <div id="services" className="services">
             <div className="services-title">
-                <h1>My service</h1>
+                <h1>{t("services.title")}</h1>
             </div>
             <div className="services-container">
                 {Services_Data.map((service, index)=> {
@@ -17,7 +20,7 @@ const Service = () => {
                             <h2>{service.s_name}</h2>
                             <p>{service.s_desc}</p>
                             <div className="services-readmore">
-                                <p>Read More</p>
+                                <p>{t("services.readmore")}</p>
                                 <img src={arrow_icon} alt="" />
                             </div>
                         </div>

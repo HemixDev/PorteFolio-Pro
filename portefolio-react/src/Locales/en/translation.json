@@ -1,0 +1,29 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about me": "About Me",
+        "services": "Services",
+        "contact": "Contact",
+        "portfolio": "Portfolio",
+        "contact-button": "Connect with me"
+    },
+    "hero": {
+        "welcome": "Hello everyone, I am HemixDev,",
+        "under-pseudo": " young developer from France.",
+        "mission": "My mission is to make the creation of your website or application as simple and collaborative as possible. I'm here to accompany you every step of the way, working hand in hand with you to realize the digital project of your dreams. With me, you'll benefit from a smooth, efficient, and personalized process to bring your ideas to life.",
+        "contact": "Connect with me",
+        "resume": "My resume"
+    },
+    "about": {
+        "title": "About Me",
+        "para1": "I am 24 years old and hold a degree in economics. Passionate about the digital world, I shifted my focus to web and application development. Currently a student, I have already started working as a freelance developer to apply my skills and gain valuable experience. My adaptability and quick learning make me an asset for any ambitious project.",
+        "para2": "I have specialized in the MERN stack, with a particular focus on React.js and Node.js. I have also completed projects in PHP, Java, Flutter, and Python.",
+        "experience": "Years of experiences",
+        "project": "Projects completed",
+        "client": "Clients satisfected"
+    },
+    "services": {
+        "title": "My services",
+        "readmore": "Read more"
+    }
+}

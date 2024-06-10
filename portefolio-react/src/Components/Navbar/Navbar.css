@@ -1,15 +1,36 @@
 .navbar {
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
     margin: 20px 170px;
 }
+.navbar-logo {
+    margin-left: 130px;
+}
 .nav-menu {
+    margin-left: 50px;
+    margin-right: 50px;
     display: flex;
     align-items: center;
     list-style: none;
     gap: 60px;
     font-size: 20px;
+}
+
+.nav-action {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px; 
+}
+
+.lng {
+    padding: 8px 11px 8px 11px;
+    border-radius: 50px;
+    border: #FFFFFF solid 2px;
+    transition: 0.5s;
 }
 
 .nav-connect {
@@ -19,6 +40,12 @@
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
+}
+
+.lng:hover {
+    transform: scale(1.1);
+    border-color: #b415ff;
+    cursor: pointer;
 }
 
 .nav-connect:hover {

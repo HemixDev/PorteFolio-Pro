@@ -1,4 +1,0 @@
-const HeroDesc = 
-"J'ai réaliser se site web pour faciliter la création du votre. Ma mission est de rendre la création de votre site web ou application aussi simple et collaborative que possible. Je suis ici pour vous accompagner à chaque étape, en travaillant main dans la main avec vous pour réaliser le projet numérique de vos rêves. Avec moi, vous bénéficierez d'un processus fluide, efficace et personnalisé pour transformer vos idées en réalité."
-
-export default HeroDesc
