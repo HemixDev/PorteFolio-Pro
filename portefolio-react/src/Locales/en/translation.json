@@ -8,7 +8,7 @@
         "contact-button": "Connect with me"
     },
     "hero": {
-        "welcome": "Hello everyone, I am HemixDev,",
+        "welcome": "Hello everyone, I am",
         "under-pseudo": " young developer from France.",
         "mission": "My mission is to make the creation of your website or application as simple and collaborative as possible. I'm here to accompany you every step of the way, working hand in hand with you to realize the digital project of your dreams. With me, you'll benefit from a smooth, efficient, and personalized process to bring your ideas to life.",
         "contact": "Connect with me",
@@ -24,6 +24,37 @@
     },
     "services": {
         "title": "My services",
+        "webDev": "Web development",
+        "webDevDesc": "Completely design a website, put it online and keep it up to date.",
+        "appDev": "App development",
+        "appDevDesc": "Fully design, deploy, and maintain an application.",
+        "update": "To update",
+        "updateDesc": "Update your site or app, maintain it, or renovate it.",
         "readmore": "Read more"
+    },
+    "myWork": {
+        "title": "My lasted works",
+        "showMore": "Show more"
+    },
+    "contact": {
+        "title": "Let's talk",
+        "underTitle": "My contact details",
+        "desc": "If you wish to get in touch, ask questions, work on a project, or arrange an interview, don't hesitate to contact me   !",
+        "contact-detail":{
+            "phone": "+33 7 86 52 29 21"
+        },
+        "contact-name": {
+            "name": "Your name",
+            "placeholder": "Enter your name"
+        },
+        "contact-mail": {
+            "mail": "Your Email",
+            "placeholder": "Enter your email"
+        },
+        "text": {
+            "text": "Whrite your message here",
+            "placeholder": "Enter your message"
+        },
+        "submit": "Submit"
     }
 }

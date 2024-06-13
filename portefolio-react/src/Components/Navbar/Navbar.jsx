@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
 import { useTranslation } from 'react-i18next'
-import LanguageSelector from '../LanguageSelector/LanguageSelector'
+import LanguageSelector from '../LanguageSelector'
 
 
 const Navbar = () => {
@@ -14,11 +14,11 @@ const Navbar = () => {
     const menuRef = useRef();
 
     const openMenu = () => {
-        menuRef.current.style.right = "0";
+        menuRef.current.style.right = "-50px";
     }
 
     const closeMenu = () => {
-        menuRef.current.style.right = "-350px";
+        menuRef.current.style.right = "-400px";
     }
 
     const { t } = useTranslation()

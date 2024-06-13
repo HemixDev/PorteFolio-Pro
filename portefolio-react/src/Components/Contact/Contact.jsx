@@ -3,8 +3,15 @@ import "./Contact.css";
 import mail_icon from "../../assets/mail_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
+import { useTranslation } from "react-i18next";
+import { FaInstagram, FaGithub, FaLinkedin, FaStackOverflow, FaDiscord} from "react-icons/fa";
+import {FaPhoneVolume, FaLocationDot} from 'react-icons/fa6';
+import { IoIosMail } from "react-icons/io";
 
 const Contact = () => {
+
+    const {t} = useTranslation()
+
         const onSubmit = async (event) => {
             event.preventDefault();
             const formData = new FormData(event.target);
@@ -31,44 +38,49 @@ const Contact = () => {
     return (
         <div id="contact" className="contact">
             <div className="contact-title">
-                <h1>Get in Touch</h1>
+                <h1>{t('contact.title')}</h1>
             </div>
             <div className="contact-section">
                 <div className="contact-left">
-                    <h1>Let's Talk</h1>
+                    <h1>{t('contact.underTitle')}</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-                        lobortis, dolor at molestie vestibulum, nisi lorem dignissim ipsum,
-                        at dictum odio nisi vel eros. Donec.
+                        {t('contact.desc')}
                     </p>
                     <div className="contact-details">
                         <div className="contact-detail">
-                            <img src={mail_icon} alt="" />
+                            <IoIosMail style={{fontSize: '40px'}}/>
                             <p>hemixdev13@gmail.com</p>
                         </div>
                         <div className="contact-detail">
-                            <img src={call_icon} alt="" />
-                            <p>+33 7 86 52 29 21</p>
+                            <FaPhoneVolume style={{fontSize: '34px'}}/>
+                            <p>{t('contact.contact-detail.phone')}</p>
                         </div>
                         <div className="contact-detail">
-                            <img src={location_icon} alt="" />
+                            <FaLocationDot style={{fontSize: '40px'}}/>
                             <p>Marseille, France</p>
+                        </div>
+                        <div className="contact-detail media">
+                            <div className="insta" ><FaInstagram style={{ fontSize: '50px'}}/></div>
+                            <div className="github"><FaGithub style={{ fontSize: '47px'}}/> </div>
+                            <div className="linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div>
+                            <div className="stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div>
+                            <div className="stack"><FaDiscord style={{ fontSize: '47px'}}/> </div>
                         </div>
                     </div>
                 </div>
                 <form onSubmit={onSubmit} className="contact-right">
-                    <label htmlFor="">Your Name</label>
-                    <input type="text" placeholder="Enter your name" name="name" />
-                    <label htmlFor="">Your Email</label>
-                    <input type="email" placeholder="'Enter your email" name="email" />
-                    <label htmlFor="">Write your message here</label>
+                    <label htmlFor="">{t('contact.contact-name.name')}</label>
+                    <input type="text" placeholder={t('contact.contact-name.placeholder')} name="name" />
+                    <label htmlFor="">{t('contact.contact-mail.mail')}</label>
+                    <input type="email" placeholder={t('contact.contact-mail.placeholder')} name="email" />
+                    <label htmlFor="">{t('contact.text.text')}</label>
                     <textarea
                         name="message"
                         rows="8"
-                        placeholder="Enter your message"
+                        placeholder={t('contact.text.placeholder')}
                     ></textarea>
                     <button type="submit" className="contact-submit">
-                        Submit
+                        {t('contact.submit')}
                     </button>
                 </form>
             </div>

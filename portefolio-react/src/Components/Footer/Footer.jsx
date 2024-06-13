@@ -9,7 +9,6 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <img src={footer_logo} alt="" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis, dolor at molestie vestibulum, nisi lorem dignissim ipsum, at dictum odio nisi vel eros. Donec.</p>
                 </div>
                 <div className="footer-top-right">
                     <div className="footer-email-input">
@@ -23,7 +22,7 @@ const Footer = () => {
             </div>
             <hr />
             <div className="footer-bottom">
-                <p className="footer-bottom-left">ALl right reserved</p>
+                <p className="footer-bottom-left">© All right reserved</p>
                 <div className="footer-bottom-right">
                     <p>Term of Services</p>
                     <p>Privacy Policy</p>

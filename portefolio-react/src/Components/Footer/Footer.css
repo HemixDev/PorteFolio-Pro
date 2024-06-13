@@ -16,6 +16,7 @@
 }
 
 .footer-top-right {
+    padding-top: 50px;
     display: flex;
     align-items: center;
     gap: 35px;
@@ -43,7 +44,7 @@
     font-size: 20px;
     padding: 22px 50px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #df8908 -5.09%, #b41f55 106.28%);
+    background: linear-gradient(270deg,#7e55a7 30%,#23a6d5 70%);
     transition: 0.3s;
 }
 

@@ -1,7 +1,6 @@
 .navbar {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
     margin: 20px 170px;
 }
@@ -27,9 +26,6 @@
 }
 
 .lng {
-    padding: 8px 11px 8px 11px;
-    border-radius: 50px;
-    border: #FFFFFF solid 2px;
     transition: 0.5s;
 }
 
@@ -43,8 +39,8 @@
 }
 
 .lng:hover {
-    transform: scale(1.1);
-    border-color: #b415ff;
+    transform: scale(1.4);
+    color: #23a6d5;
     cursor: pointer;
 }
 
@@ -108,7 +104,7 @@
         height: 100%;
         z-index: 2;
         transition: right 0.5s;
-        right: -350px;
+        right: -400px;
     }
     .nav-menu li{
         font-size: 30px;

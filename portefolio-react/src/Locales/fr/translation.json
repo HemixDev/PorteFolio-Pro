@@ -8,7 +8,7 @@
         "contact-button": "Me contacter"
     },
     "hero": {
-        "welcome": "Bonjours à tous, je suis HemixDev,",
+        "welcome": "Bonjours à tous, je suis",
         "under-pseudo": " jeune développeur de Marseille.",
         "mission": "Ma mission est de rendre la création de votre site web ou application aussi simple et collaborative que possible. Je suis ici pour vous accompagner à chaque étape, en travaillant main dans la main avec vous pour réaliser le projet numérique de vos rêves. Avec moi, vous bénéficierez d'un processus fluide, efficace et personnalisé pour transformer vos idées en réalité.",
         "contact": "Me Contacter",
@@ -24,6 +24,37 @@
     },
     "services": {
         "title": "Mes services",
+        "webDev": "Développement web",
+        "webDevDesc": "Concevoir intégralement un site web, le mettre en ligne et le maintenir à jour.",
+        "appDev": "Développement d'application",
+        "appDevDesc": "Concevoir intégralement une application, la mettre en ligne et la maintenir à jour. ",
+        "update": "Mettre à jour",
+        "updateDesc": "Mettre à jour votre site ou votre app, l'entretenir ou la rénover.",
         "readmore": "En lire plus"
+    },
+    "myWork": {
+        "title": "Mes derniers projets",
+        "showMore": "En voir plus"
+    },
+    "contact": {
+        "title": "Prenons contacte",
+        "underTitle": "Mes coordonnées",
+        "desc": "Si vous souhaitez entrer en contact, poser des questions, réaliser un projet ou organiser un entretient n'hésitez pas à me contacter !",
+        "contact-detail":{
+            "phone": "07 86 52 29 21"
+        },
+        "contact-name": {
+            "name": "Votre nom",
+            "placeholder": "Entrez votre nom"
+        },
+        "contact-mail": {
+            "mail": "Votre Email",
+            "placeholder": "Entrez votre email"
+        },
+        "text": {
+            "text": "Ecrivez votre message ici",
+            "placeholder": "Entrez votre message"
+        },
+        "submit": "Soumettre"
     }
 }

@@ -29,12 +29,29 @@
 }
 
 .contact-left h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 700;
-    background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
+    background: radial-gradient(circle, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .contact-left p {
@@ -109,6 +126,10 @@
 .contact-submit:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.media {
+    margin-top: 25px;
 }
 
 @media(max-width:768px){
