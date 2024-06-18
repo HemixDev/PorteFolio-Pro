@@ -1,8 +1,5 @@
 import React from "react";
 import "./Contact.css";
-import mail_icon from "../../assets/mail_icon.svg";
-import location_icon from "../../assets/location_icon.svg";
-import call_icon from "../../assets/call_icon.svg";
 import { useTranslation } from "react-i18next";
 import { FaInstagram, FaGithub, FaLinkedin, FaStackOverflow, FaDiscord} from "react-icons/fa";
 import {FaPhoneVolume, FaLocationDot} from 'react-icons/fa6';
@@ -60,10 +57,10 @@ const Contact = () => {
                             <p>Marseille, France</p>
                         </div>
                         <div className="contact-detail media">
-                            <div className="insta" ><FaInstagram style={{ fontSize: '50px'}}/></div>
-                            <div className="github"><FaGithub style={{ fontSize: '47px'}}/> </div>
-                            <div className="linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div>
-                            <div className="stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div>
+                            <a href=""><div className="insta" target="_blank"><FaInstagram style={{ fontSize: '50px'}}/></div></a>
+                            <a href="https://github.com/HemixDev" target="_blank"><div className="github"><FaGithub style={{ fontSize: '47px'}}/></div></a>
+                            <a href="https://www.linkedin.com/in/maximilien-pont-951961240/" target="_blank"><div className="linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div></a>
+                            <a href="https://stackoverflow.com/users/23138625/hemix" target="_blank"><div className="stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div></a>
                             <div className="stack"><FaDiscord style={{ fontSize: '47px'}}/> </div>
                         </div>
                     </div>

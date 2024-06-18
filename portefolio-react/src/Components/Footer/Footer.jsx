@@ -4,21 +4,45 @@ import footer_logo from '../../assets/logo-footer.svg'
 import user_icon from '../../assets/user_icon.svg'
 
 const Footer = () => {
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "2ecba564-c57e-4b36-832f-8a7ddd3b1542");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: json,
+        }).then((res) => res.json());
+
+        if (res.success) {
+            alert(res.message)
+        }
+    };
+
     return (
         <div className="footer">
             <div className="footer-top">
                 <div className="footer-top-left">
                     <img src={footer_logo} alt="" />
                 </div>
-                <div className="footer-top-right">
+                <form onSubmit={onSubmit} className="footer-top-right">
                     <div className="footer-email-input">
                         <img src={user_icon} alt="" />
-                        <input type="email" placeholder="Enter your email"/>
+                        <input type="email" name="email" placeholder="Enter your email"/>
                     </div>
-                    <div className="footer-subscribe">
+                    <button type="submit" className="footer-subscribe">
                         Subscribe
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
             <hr />
             <div className="footer-bottom">

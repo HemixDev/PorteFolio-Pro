@@ -31,24 +31,21 @@
 .contact-left h1 {
     font-size: 70px;
     font-weight: 700;
-    background: radial-gradient(circle, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient 3s ease infinite;
+    background-size: 300% 300%;
+    animation: gradient 4s ease infinite;
 }
-
 
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
@@ -130,6 +127,15 @@
 
 .media {
     margin-top: 25px;
+}
+
+.media div {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.media div:hover {
+    transform: scale(1.3);
 }
 
 @media(max-width:768px){

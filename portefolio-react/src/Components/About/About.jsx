@@ -1,6 +1,6 @@
 import React from "react";
 import './About.css'
-import profile_img from '../../assets/profile_img.svg'
+import profile_img from '../../assets/photo-marseille.jpg'
 import { useTranslation } from "react-i18next";
 
 const About = () => {

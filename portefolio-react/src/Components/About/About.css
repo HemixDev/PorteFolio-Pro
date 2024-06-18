@@ -22,6 +22,12 @@
     gap: 80px;
 }
 
+.about-left img {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
 .about-right {
     display: flex;
     flex-direction: column;

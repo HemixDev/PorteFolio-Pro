@@ -44,8 +44,10 @@
     font-size: 20px;
     padding: 22px 50px;
     border-radius: 50px;
-    background: linear-gradient(270deg,#7e55a7 30%,#23a6d5 70%);
+    border: #fff solid 2px;
     transition: 0.3s;
+    background-color: transparent;
+    color: #fff;
 }
 
 .footer-bottom {
@@ -66,7 +68,8 @@
 
 .footer-subscribe:hover {
     transform: scale(1.1);
-    transition: 0.3s;
+    border-color: #b415ff;
+    cursor: pointer;
 }
 
 @media(max-width:768px){

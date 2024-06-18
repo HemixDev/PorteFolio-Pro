@@ -39,7 +39,6 @@
 }
 
 .lng:hover {
-    transform: scale(1.4);
     color: #23a6d5;
     cursor: pointer;
 }

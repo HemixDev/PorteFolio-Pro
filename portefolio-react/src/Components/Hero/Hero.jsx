@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Hero.css'
-import logo from '../../assets/logo-home.svg'
+import logo from '../../assets/transparent_logo (1).png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useTranslation } from 'react-i18next'
 import ResumeCv from '../../Public/MonCV.pdf'
