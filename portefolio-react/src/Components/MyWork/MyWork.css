@@ -39,7 +39,8 @@
 }
 
 .mywork-showmore {
-    display: flex;
+    display: inline-flex;
+    white-space: nowrap;
     gap: 15px;
     border-radius: 50px;
     border: 2px solid white;
