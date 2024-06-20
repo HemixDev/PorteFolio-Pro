@@ -8,6 +8,7 @@
 }
 .services-title {
     position: relative;
+    text-shadow: 0 0 40px rgba(35, 166, 213, 0.3);
 }
 
 .services-title h1 {

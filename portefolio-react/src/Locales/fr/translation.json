@@ -56,5 +56,9 @@
             "placeholder": "Entrez votre message"
         },
         "submit": "Soumettre"
+    },
+    "footer": {
+        "submit": "Soumettre",
+        "email": "Entrez votre email"
     }
 }

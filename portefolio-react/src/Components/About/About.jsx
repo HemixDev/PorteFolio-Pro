@@ -23,7 +23,7 @@ const About = () => {
                     </div>
                     <div className="about-skills">
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{width: "70%"}}/></div>
-                        <div className="about-skill"><p>Nodejs</p><hr style={{width: "30%"}}/></div>
+                        <div className="about-skill"><p>Nodejs</p><hr style={{width: "35%"}}/></div>
                         <div className="about-skill"><p>React</p><hr style={{width: "40%"}}/></div>
                         <div className="about-skill"><p>MongoDB</p><hr style={{width: "30%"}}/></div>
                     </div>
@@ -31,7 +31,7 @@ const About = () => {
             </div>
             <div className="about-achivements">
                 <div className="about-achivement">
-                    <h1>+3</h1>
+                    <h1>+1</h1>
                     <p>{t('about.experience')}</p>
                 </div>
                 <hr />

@@ -15,6 +15,8 @@
     padding: 0 30px;
     font-size: 80px;
     font-weight: 600;
+    text-shadow: 0 0 40px rgba(35, 166, 213, 0.3);
+
 }
 
 .about-section {
@@ -24,7 +26,7 @@
 
 .about-left img {
     width: 100%;
-    border: 2px solid #fff;
+    box-shadow: 50px;
     border-radius: 10px;
 }
 

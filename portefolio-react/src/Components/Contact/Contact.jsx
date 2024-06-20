@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaInstagram, FaGithub, FaLinkedin, FaStackOverflow, FaDiscord} from "react-icons/fa";
 import {FaPhoneVolume, FaLocationDot} from 'react-icons/fa6';
 import { IoIosMail } from "react-icons/io";
+import { FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
 
@@ -61,6 +62,7 @@ const Contact = () => {
                             <a href="https://github.com/HemixDev" target="_blank"><div className="github"><FaGithub style={{ fontSize: '47px'}}/></div></a>
                             <a href="https://www.linkedin.com/in/maximilien-pont-951961240/" target="_blank"><div className="linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div></a>
                             <a href="https://stackoverflow.com/users/23138625/hemix" target="_blank"><div className="stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div></a>
+                            <a href="" target="_blank"><div className="stack"><FaFacebook style={{ fontSize: '47px'}}/> </div></a>
                             <div className="stack"><FaDiscord style={{ fontSize: '47px'}}/> </div>
                         </div>
                     </div>

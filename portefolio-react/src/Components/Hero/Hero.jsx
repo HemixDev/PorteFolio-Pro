@@ -8,11 +8,12 @@ import ResumeCv from '../../Public/MonCV.pdf'
 const Hero = () => {
 
     const { t } = useTranslation()
-    
+
     const [text, setText] = useState('')
     const [charIndex, setCharIndex] = useState(0)
     const [currentTextIndex, setCurrentTextIndex] = useState(0)
     const fullText = ['Hemix Dev', 'Maximilien']
+
 
     useEffect(() => {
         const randomSpeed = (min, max) => Math.floor(Math.random() * (max - min) + min)

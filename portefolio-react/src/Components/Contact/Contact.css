@@ -9,6 +9,7 @@
 
 .contact-title {
     position: relative;
+    text-shadow: 0 0 40px rgba(230, 60, 126, 0.3);
 }
 
 .contact-title h1 {
@@ -31,29 +32,29 @@
 .contact-left h1 {
     font-size: 70px;
     font-weight: 700;
-    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(to right, #ee7752, rgb(231, 60, 126),#fff 35%, #23a6d5, #23d5ab);
+    background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 300% 300%;
-    animation: gradient 4s ease infinite;
+    animation: gradient 4s linear infinite;
 }
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 75%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 70%;
     }
 }
 
 .contact-left p {
     max-width: 550px;
-    color: #d8d8d8;
+    color: #fff;
     font-size: 20px;
     line-height: 35px;
 }
@@ -62,8 +63,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    color: #d8d8d8;
+    color: #fff;
     font-size: 22px;
+}
+
+.contact-detail p {
+    color: #fff;
 }
 
 .contact-detail {
@@ -112,19 +117,28 @@
     border: none;
     color: white;
     border-radius: 50px;
-    background: linear-gradient(270deg, #df8908 -5.09%, #b41f55 106.28%);
+    background: linear-gradient(270deg, #23d5ab, #23a6d5, #e73c7e,#ee7752);
     font-size: 22px;
     padding: 20px 60px;
     margin-bottom: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s;
+    background-size: 300% 300%;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .contact-submit:hover {
     transform: scale(1.1);
-    transition: 0.3s;
+    animation: gradient-animation 3s forwards;
 }
-
 .media {
     margin-top: 25px;
 }

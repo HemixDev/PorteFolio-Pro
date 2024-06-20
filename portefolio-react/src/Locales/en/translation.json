@@ -56,5 +56,9 @@
             "placeholder": "Enter your message"
         },
         "submit": "Submit"
+    },
+    "footer": {
+        "submit": "Subscribe",
+        "email": "Enter your email"
     }
 }

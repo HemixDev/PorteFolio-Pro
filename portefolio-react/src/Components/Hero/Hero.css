@@ -85,30 +85,78 @@
 .hero-connect {
     padding: 25px 45px;
     border-radius: 50px;
-    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.08%);
+    background: linear-gradient(270deg, #23d5ab, #23a6d5, #e73c7e,#ee7752);
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.5s;
+    background-size: 300% 300%;
 }
 
-.hero-resume {
-    padding: 25px 75px;
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.hero-connect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: 50px;
-    border: 2px solid #fff;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-    display: inline-block;
-    text-align: center;
+    background: linear-gradient(270deg,  rgb(35, 213, 171), rgb(35, 166, 213),  rgb(231, 60, 126),  rgb(238, 119, 82));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    background-size: 300% 300%;
+    filter: blur(10px); 
 }
 
 .hero-connect:hover {
+    transform: scale(1.05);
+}
+
+.hero-connect:hover::before {
+    opacity: 1;
+    animation: gradient-animation 3s forwards;
     transform: scale(1.1);
 }
 
-.hero-resume:hover {
-    transform: scale(1.1);
-    border-color: #b415ff;
+.hero-resume {
+    padding: 25px 45px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    background: transparent;
     cursor: pointer;
+    transition: 0.5s;
+    background-size: 300% 300%;
+    border: solid 2px  rgb(35, 166, 213);
+}
+
+.hero-resume:hover {
+    color: rgba(35, 166, 213, 1);
+    transition: 0.3s;  
+    box-shadow: 0 0 40px rgba(35, 166, 213, 1);
+}
+
+.hero-resume:active {
+    transition: 0.3s;
+    transform: scale(0.85);
+    box-shadow: none;
+}
+
+@keyframes gradient-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 @media(max-width:768px) {

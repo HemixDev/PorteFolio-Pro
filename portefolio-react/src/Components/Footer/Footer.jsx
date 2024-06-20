@@ -2,8 +2,12 @@ import React from "react";
 import './Footer.css'
 import footer_logo from '../../assets/logo-footer.svg'
 import user_icon from '../../assets/user_icon.svg'
+import { useTranslation } from "react-i18next";
+
 
 const Footer = () => {
+
+    const {t} = useTranslation()
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -37,10 +41,10 @@ const Footer = () => {
                 <form onSubmit={onSubmit} className="footer-top-right">
                     <div className="footer-email-input">
                         <img src={user_icon} alt="" />
-                        <input type="email" name="email" placeholder="Enter your email"/>
+                        <input type="email" name="email" placeholder={t('footer.email')}/>
                     </div>
                     <button type="submit" className="footer-subscribe">
-                        Subscribe
+                        {t('footer.submit')}
                     </button>
                 </form>
             </div>
