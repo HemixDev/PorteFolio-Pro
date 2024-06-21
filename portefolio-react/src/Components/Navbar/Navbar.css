@@ -81,6 +81,7 @@
 .lng:hover {
     color: #23a6d5;
     cursor: pointer;
+    transform: rotate(360deg);
 }
 
 .lng::after {

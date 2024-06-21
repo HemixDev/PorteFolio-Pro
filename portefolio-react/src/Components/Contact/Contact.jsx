@@ -6,7 +6,9 @@ import {FaPhoneVolume, FaLocationDot} from 'react-icons/fa6';
 import { IoIosMail } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
 
+
 const Contact = () => {
+
 
     const {t} = useTranslation()
 
@@ -41,9 +43,14 @@ const Contact = () => {
             <div className="contact-section">
                 <div className="contact-left">
                     <h1>{t('contact.underTitle')}</h1>
-                    <p>
-                        {t('contact.desc')}
-                    </p>
+                        <div className="contact-detail media">
+                            <a href="" target="_blank"><div className="icon insta"><FaInstagram  style={{ fontSize: '50px'}}/></div></a>
+                            <a href="https://github.com/HemixDev" target="_blank"><div className="icon github"><FaGithub style={{ fontSize: '47px'}}/></div></a>
+                            <a href="https://www.linkedin.com/in/maximilien-pont-951961240/" target="_blank"><div className="icon linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div></a>
+                            <a href="https://stackoverflow.com/users/23138625/hemix" target="_blank"><div className="icon stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div></a>
+                            <a href="" target="_blank"><div className="icon facebook"><FaFacebook style={{ fontSize: '47px'}}/> </div></a>
+                            <div className="icon discord"><FaDiscord style={{ fontSize: '47px'}}/> </div>
+                        </div>
                     <div className="contact-details">
                         <div className="contact-detail">
                             <IoIosMail style={{fontSize: '40px'}}/>
@@ -57,14 +64,9 @@ const Contact = () => {
                             <FaLocationDot style={{fontSize: '40px'}}/>
                             <p>Marseille, France</p>
                         </div>
-                        <div className="contact-detail media">
-                            <a href=""><div className="insta" target="_blank"><FaInstagram style={{ fontSize: '50px'}}/></div></a>
-                            <a href="https://github.com/HemixDev" target="_blank"><div className="github"><FaGithub style={{ fontSize: '47px'}}/></div></a>
-                            <a href="https://www.linkedin.com/in/maximilien-pont-951961240/" target="_blank"><div className="linkedin"><FaLinkedin style={{ fontSize: '48px'}}/></div></a>
-                            <a href="https://stackoverflow.com/users/23138625/hemix" target="_blank"><div className="stack"><FaStackOverflow style={{ fontSize: '47px'}}/> </div></a>
-                            <a href="" target="_blank"><div className="stack"><FaFacebook style={{ fontSize: '47px'}}/> </div></a>
-                            <div className="stack"><FaDiscord style={{ fontSize: '47px'}}/> </div>
-                        </div>
+                    <p>
+                        {t('contact.desc')}
+                    </p>
                     </div>
                 </div>
                 <form onSubmit={onSubmit} className="contact-right">
@@ -77,7 +79,7 @@ const Contact = () => {
                         name="message"
                         rows="8"
                         placeholder={t('contact.text.placeholder')}
-                    ></textarea>
+                        ></textarea>
                     <button type="submit" className="contact-submit">
                         {t('contact.submit')}
                     </button>
