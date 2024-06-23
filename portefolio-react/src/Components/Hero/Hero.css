@@ -126,6 +126,11 @@
     transform: scale(1.1);
 }
 
+.contact-detail:hover p {
+    transition: 0.5s;
+    color: rgb(35, 166, 213);
+}
+
 .hero-resume {
     padding: 25px 45px;
     text-decoration: none;

@@ -60,5 +60,8 @@
     "footer": {
         "submit": "Subscribe",
         "email": "Enter your email"
+    },
+    "other":{
+        "copy": "Copy!"
     }
 }

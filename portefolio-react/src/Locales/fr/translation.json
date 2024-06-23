@@ -60,5 +60,8 @@
     "footer": {
         "submit": "Soumettre",
         "email": "Entrez votre email"
+    },
+    "other":{
+        "copy": "Copié!"
     }
 }
