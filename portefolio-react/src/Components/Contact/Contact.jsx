@@ -40,9 +40,28 @@ const Contact = () => {
 
         if (res.success) {
             alert(res.message);
-            resetForm(); // Réinitialisation des champs après succès de l'envoi
+            resetForm();
         }
     };
+
+    function copy(text, event) {
+        navigator.clipboard.writeText(text).then(() => {
+            const confirmationMessage = document.createElement('div');
+            confirmationMessage.textContent = t('other.copy');
+            confirmationMessage.classList.add('copy-confirm');
+
+            confirmationMessage.style.top = `${event.clientY - 40}px`;
+            confirmationMessage.style.left = `${event.clientX - 43}px`;
+
+            document.body.appendChild(confirmationMessage);
+
+            setTimeout(() => {
+                confirmationMessage.remove();
+            }, 500);
+        }).catch(err => {
+            console.error('Failed to copy', err);
+        });
+    }
 
     return (
         <div id="contact" className="contact">
@@ -53,33 +72,31 @@ const Contact = () => {
                 <div className="contact-left">
                     <h1>{t('contact.underTitle')}</h1>
                     <div className="media">
-                        <a href="" target="_blank"><div className="icon insta"><FaInstagram style={{ fontSize: '50px' }} /></div></a>
+                        <a href="#" target="_blank"><div className="icon insta"><FaInstagram style={{ fontSize: '50px' }} /></div></a>
                         <a href="https://github.com/HemixDev" target="_blank"><div className="icon github"><FaGithub style={{ fontSize: '47px' }} /></div></a>
                         <a href="https://www.linkedin.com/in/maximilien-pont-951961240/" target="_blank"><div className="icon linkedin"><FaLinkedin style={{ fontSize: '48px' }} /></div></a>
                         <a href="https://stackoverflow.com/users/23138625/hemix" target="_blank"><div className="icon stack"><FaStackOverflow style={{ fontSize: '47px' }} /> </div></a>
-                        <a href="" target="_blank"><div className="icon facebook"><FaFacebook style={{ fontSize: '47px' }} /> </div></a>
-                        <div className="icon discord"><FaDiscord style={{ fontSize: '47px' }} /> </div>
+                        <a href="#" target="_blank"><div className="icon facebook"><FaFacebook style={{ fontSize: '47px' }} /> </div></a>
+                        <a href="#"><div className="icon discord"><FaDiscord style={{ fontSize: '47px' }} /> </div></a>
                     </div>
-                    <div className="contact-container">
                         <div className="contact-details">
-                            <div className="contact-detail" onClick={(e) => copy('hemixdev13@gmail.com', e)} >
-                                <IoIosMail style={{ fontSize: '40px' }} />
+                            <div className="contact-detail email" onClick={(e) => copy('hemixdev13@gmail.com', e)} >
+                                <IoIosMail className="icon-contact" title="copy" style={{ fontSize: '40px' }} />
+                                <p>Email</p>
                                 <p>hemixdev13@gmail.com</p>
                             </div>
-                            <div className="contact-detail" onClick={(e) => copy(t('contact.contact-detail.phone'), e)}>
-                                <FaPhoneVolume style={{ fontSize: '34px' }} />
+                            <hr />
+                            <div className="contact-detail phone" onClick={(e) => copy(t('contact.contact-detail.phone'), e)}>
+                                <FaPhoneVolume className="icon-contact" title="copy" style={{ fontSize: '34px' }} />
+                                <p>Phone</p>
                                 <p>{t('contact.contact-detail.phone')}</p>
                             </div>
-                            <div className="contact-detail" onClick={(e) => copy('Marseille, France', e)} >
-                                <FaLocationDot style={{ fontSize: '40px' }} />
+                            <hr />
+                            <div className="contact-detail location" onClick={(e) => copy('Marseille, France', e)} >
+                                <FaLocationDot className="icon-contact" title="copy" style={{ fontSize: '40px' }} />
+                                <p>Location</p>
                                 <p className="contact-text">Marseille, France</p>
                             </div>
-                        </div>
-                        <div className="contact-desc">
-                            <p>
-                                {t('contact.desc')}
-                            </p>
-                        </div>
                     </div>
 
                 </div>
@@ -89,7 +106,7 @@ const Contact = () => {
                         <span>{t('contact.contact-name.name')}</span>
                     </div>
                     <div className="form-group">
-                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="" />
+                        <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="" />
                         <span>{t('contact.contact-mail.mail')}</span>
                     </div>
                     <div className="form-group textarea">
