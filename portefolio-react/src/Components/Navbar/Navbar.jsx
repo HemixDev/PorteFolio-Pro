@@ -6,6 +6,7 @@ import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from '../LanguageSelector'
+import { BiRefresh } from 'react-icons/bi'
 
 
 const Navbar = () => {
@@ -23,15 +24,20 @@ const Navbar = () => {
 
     const { t } = useTranslation()
 
+    const refreshPage = () => {
+        window.location.reload(false)
+    }
+
     return (
         <div className='navbar'>
-            <AnchorLink className='anchor-link' offset={50} href='#home' onClick={() => setMenu('home')}><img className='navbar-logo' src={logo} alt='' /></AnchorLink>
+            
+            <img className='navbar-logo' src={logo} alt='' onClick={refreshPage}/>
             <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
             <ul ref={menuRef} className="nav-menu">
                 <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />
                 <li><AnchorLink className='anchor-link' offset={50} href='#home'><p onClick={() => setMenu('home')}>{t("navbar.home")}</p></AnchorLink></li>
                 <li><AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={() => setMenu('about')}>{t("navbar.about me")}</p></AnchorLink></li>
-                <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={() => setMenu('services')}>{t("navbar.services")}</p></AnchorLink></li>
+                {/* <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={() => setMenu('services')}>{t("navbar.services")}</p></AnchorLink></li> */}
                 <li><AnchorLink className='anchor-link' offset={50} href='#mywork'><p onClick={() => setMenu('mywork')}>{t("navbar.portfolio")}</p></AnchorLink></li>
                 <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={() => setMenu('contact')}>{t("navbar.contact")}</p></AnchorLink></li>
             </ul>

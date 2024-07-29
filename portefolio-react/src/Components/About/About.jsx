@@ -1,11 +1,45 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import './About.css'
 import profile_img from '../../assets/photo-marseille.jpg'
 import { useTranslation } from "react-i18next";
 
 const About = () => {
 
-    const {t} = useTranslation()
+    const SkillBar = ({ skillClass, width, animationName }) => {
+        const skillRef = useRef(null);
+    
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animated');
+                            observer.unobserve(entry.target); // arrête l'observation une fois l'animation lancée
+                        }
+                    });
+                },
+                { threshold: 0.5 } // déclenche à 50% de visibilité
+            );
+    
+            if (skillRef.current) {
+                observer.observe(skillRef.current);
+            }
+    
+            return () => {
+                if (skillRef.current) {
+                    observer.unobserve(skillRef.current);
+                }
+            };
+        }, []);
+    
+        return (
+            <div className={`skillbar ${skillClass}`} ref={skillRef}>
+                <span></span>
+            </div>
+        );
+    };
+
+    const { t } = useTranslation()
 
     return (
         <div id="about" className="about">
@@ -21,13 +55,28 @@ const About = () => {
                         <p>{t('about.para1')}</p>
                         <p>{t('about.para2')}</p>
                     </div>
-                    <div className="about-skills">
-                        <div className="about-skill"><p>HTML & CSS</p><hr style={{width: "70%"}}/></div>
-                        <div className="about-skill"><p>Nodejs</p><hr style={{width: "35%"}}/></div>
-                        <div className="about-skill"><p>React</p><hr style={{width: "40%"}}/></div>
-                        <div className="about-skill"><p>MongoDB</p><hr style={{width: "30%"}}/></div>
                     </div>
-                </div>
+                    <div className="about-skills">
+                        <h2>My Skills</h2>
+                        <li>
+                            <span className="heading">HTML & CSS</span>
+                            <SkillBar skillClass="html" width="80%" animationName="html" />
+
+                        </li>
+                        <li>
+                            <span className="heading">ReactJS</span>
+                            <SkillBar skillClass="react" width="50%" animationName="react" />
+
+                        </li>
+                        <li>
+                            <span className="heading">NodeJS</span>
+                            <SkillBar skillClass="node" width="40%" animationName="node" />
+                        </li>
+                        <li>
+                            <span className="heading">MongoDB</span>
+                            <SkillBar skillClass="mongo" width="60%" animationName="mongo" />
+                        </li>
+                    </div>
             </div>
             <div className="about-achivements">
                 <div className="about-achivement">

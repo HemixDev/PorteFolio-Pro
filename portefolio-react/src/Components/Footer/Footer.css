@@ -74,16 +74,32 @@
 
 @media(max-width:768px){
     .footer{
-        margin: 50px 70px;
+        margin: 5%;
     }
     .footer-top{
+        display: flex;
         flex-direction: column;
-        gap: 50px;
+        align-items: center;
+    }
+    .footer-top-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-email-input {
+        max-width: 50%;
     }
     .footer-bottom{
         display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .footer-bottom-right{
+        display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
+        gap: 1rem;
     }
 }
 

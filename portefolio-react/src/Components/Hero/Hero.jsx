@@ -46,11 +46,11 @@ const Hero = () => {
                     {t("hero.under-pseudo")}
                 </span>
             </h1>
-            <p>
+            <p className='mission'>
                 {t('hero.mission')}
             </p>
             <div className="hero-action">
-                <div className="hero-connect"> <AnchorLink className='anchor-link' offset={50} href='#contact' onClick={() => setMenu('contact')}>{t("hero.contact")}</AnchorLink></div>
+                <div className="hero-connect"> <AnchorLink className='anchor-link' offset={50} href='#contact' >{t("hero.contact")}</AnchorLink></div>
                 <a className="hero-resume" href={ResumeCv} download="MonCV.pdf">
                     {t('hero.resume')}
                 </a>

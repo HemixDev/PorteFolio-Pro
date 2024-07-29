@@ -6,11 +6,11 @@
     gap: 35px;
 }
 
-.hero-logo {
+/* .hero-logo {
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #000, #161513, #1a1e20);
     background-size: 400% 400%;
     animation: gradient 7s ease-in-out infinite;
 }
@@ -27,7 +27,7 @@
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 .hero h1 {
     text-align: center;
@@ -66,11 +66,11 @@
     -webkit-text-fill-color: transparent
 }
 
-.hero p {
+.mission {
     width: 60%;
     text-align: center;
     font-size: 24px;
-    line-height: 40px;
+    line-height: 2.7rem;
 }
 
 .hero-action {
@@ -161,8 +161,7 @@
 
 @media(max-width:768px) {
     .hero img {
-        margin-top: 50px;
-        width: 400px;
+        display: none;
     }
 
     .hero h1 {

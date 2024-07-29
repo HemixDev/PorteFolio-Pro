@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 70px;
+    gap: 3rem;
+
 }
 
 .contact-title {
@@ -12,7 +12,6 @@
 }
 
 .contact-title h1 {
-    padding: 0 30px;
     font-size: 80px;
     letter-spacing: 0.03em;
     font-weight: 600;
@@ -348,10 +347,6 @@ textarea:not(:placeholder-shown){
     align-items: center;
 }
 
-.media a {
-    display: inline-block;
-}
-
 .media div {
     color: #fff;
     transition: transform 0.5s;
@@ -363,11 +358,6 @@ textarea:not(:placeholder-shown){
     height: 100px;
     margin: 10px;
     position: relative;
-}
-
-.media div:hover {
-    border-color: transparent;
-    transition-delay: 0.3s;
 }
 
 .media div::before {
@@ -399,7 +389,6 @@ textarea:not(:placeholder-shown){
 
 .icon {
     position: relative;
-    display: inline-block;
 }
 
 .icon::after {
@@ -463,70 +452,102 @@ textarea:not(:placeholder-shown){
 
 
 @media (max-width:768px) {
-    .contact {
-        gap: 50px;
-        align-items: start;
-        flex-direction: column;
-    }
-
-    .contact-title h1 {
-        align-items: center;
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
-        white-space: nowrap;
-        font-size: 2.6em;
-    }
-
-    .contact-section{
-        align-items: center;
-        flex-direction: column;
-    }
 
 
 
-    .contact-left h1{
-        align-items: center;
-        font-size: 2.2em;
-    }
-
-    .media {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .icon {
-        margin: 5px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-    .contact-left p {
-        font-size: 18px;
-    }
-
-    .contact-detail {
-        gap: 20px;
-    }
-
-    .contact-detail img {
-        width: 25px;
-    }
-
-    .contact-right input {
-        width: 100%;
-        font-size: 20px;
-    }
-
-    .contact-right textarea {
-        width: 95%;
-        font-size: 20px;
-    }
 }
 
 
 /* mobile */
 
 
+@media screen and (max-width: 576px) {
+    .contact {
+        margin-left: 5%;
+    }
+    .contact h1{
+        text-align: center;
+        font-size: 3rem;
+        text-wrap: wrap;
+        width: 70%;
+    }
+    .contact-section{
+        padding: 0 0; 
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 
+    .contact-left h1 {
+        margin-left: 15%;
+        text-align: center;
+        font-size: 2.3rem;
+        text-wrap: wrap;
+        max-width: 70%;
+    }
+    .media {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        margin-left: 23%;
+        align-items: center;
+        max-width: 50%;
+    }
+    .media a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        margin-left: -7%;
+    }
+
+    .contact-details hr {
+        display: none;
+    }
+
+    .contact-right{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10% 0 30%;
+    }
+
+    /* .form-group{
+        max-width: 8%;
+    } */
+
+    .contact-right input{
+        max-width: 50%;
+    }
+    .contact-right textarea{
+        max-width: 45%;
+    }
+    .contact-right input, .contact-right textarea{
+        margin-left: 8%;
+    }
+    .contact-right span{
+        margin-left: -60%;
+        font-size: 1.2rem;
+    }
+    textarea:focus ~ span,
+    textarea:not(:placeholder-shown) ~ span{
+    color:  #23d5ab;
+    transform: translateY(-30px) translateX(40px);
+    font-size: 1.1rem;
+    padding: 0 5px;
+    background: #161513;
+    border-left: 1px solid #23d5ab;
+    border-right: 1px solid #23d5ab;
+    letter-spacing: 0rem;
+    opacity: 1;
+    }
+    .contact-submit{
+        margin-left: 15%;
+    }
+}

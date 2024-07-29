@@ -10,13 +10,13 @@
     "hero": {
         "welcome": "Hello everyone, I am",
         "under-pseudo": " young developer from France.",
-        "mission": "My mission is to make the creation of your website or application as simple and collaborative as possible. I'm here to accompany you every step of the way, working hand in hand with you to realize the digital project of your dreams. With me, you'll benefit from a smooth, efficient, and personalized process to bring your ideas to life.",
+        "mission": "I am determined to join a work-study program to obtain my RNCP Level 5 title in web development. I am ready to fully invest myself to acquire the necessary skills and become a competent and operational web developer. This opportunity represents a springboard for me towards a rewarding and dynamic career in web development.",
         "contact": "Connect with me",
         "resume": "My resume"
     },
     "about": {
         "title": "About Me",
-        "para1": "I am 24 years old and hold a degree in economics. Passionate about the digital world, I shifted my focus to web and application development. Currently a student, I have already started working as a freelance developer to apply my skills and gain valuable experience. My adaptability and quick learning make me an asset for any ambitious project.",
+        "para1": "I am 24 years old and hold a degree in economics. Passionate about the digital world, I shifted my focus to web and application development. My adaptability and quick learning make me an asset for any ambitious project.",
         "para2": "I have specialized in the MERN stack, with a particular focus on React.js and Node.js. I have also completed projects in PHP, Java, Flutter, and Python.",
         "experience": "Years of experiences",
         "project": "Projects completed",

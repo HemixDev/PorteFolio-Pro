@@ -3,20 +3,20 @@
         "home": "Accueil",
         "about me": "A propos",
         "services": "Services",
-        "contact": "Contacte",
+        "contact": "Contact",
         "portfolio": "Portfolio",
         "contact-button": "Me contacter"
     },
     "hero": {
         "welcome": "Bonjours à tous, je suis",
         "under-pseudo": " jeune développeur de Marseille.",
-        "mission": "Ma mission est de rendre la création de votre site web ou application aussi simple et collaborative que possible. Je suis ici pour vous accompagner à chaque étape, en travaillant main dans la main avec vous pour réaliser le projet numérique de vos rêves. Avec moi, vous bénéficierez d'un processus fluide, efficace et personnalisé pour transformer vos idées en réalité.",
+        "mission": "Je suis déterminé à rejoindre une alternance pour obtenir mon titre RNCP de niveau 5 en développement web. Je suis prêt à m'investir pleinement pour acquérir les compétences nécessaires et devenir un développeur web compétent et opérationnel. Cette opportunité représente pour moi un tremplin vers une carrière enrichissante et dynamique dans le domaine du développement web.",
         "contact": "Me Contacter",
         "resume": "Mon CV"
     },
     "about": {
         "title": "A mon propos",
-        "para1": "Je m'appelle Maximilien, j'ai 24 ans et j'habite vers Marseille. Passionné par le numérique, j'ai choisi de m'orienter vers le développement web et d'app. Actuellement étudiant, je me suis déjà lancé en tant que développeur freelance pour mettre mes compétences à votre profits",
+        "para1": "Je m'appelle Maximilien, j'ai 24 ans et j'habite vers Marseille. Passionné par le numérique, j'ai choisi de m'orienter vers le développement web et d'app. Mon adaptabilité et ma capacité d'apprentissage rapide font de moi un atout pour tout projet ambitieux.",
         "para2": "Je me suis spécialisé dans la stack MERN, en mettant particulièrement l'accent sur React.js. J'ai également réalisé des projets en PHP, Java, Flutter et Python.",
         "experience": "Années d'experiences",
         "project": "Projets complétait",
@@ -37,7 +37,7 @@
         "showMore": "En voir plus"
     },
     "contact": {
-        "title": "Prenons contacte",
+        "title": "Prenons contact",
         "underTitle": "Mes coordonnées",
         "desc": "Si vous souhaitez entrer en contact, poser des questions, réaliser un projet ou organiser un entretient n'hésitez pas à me contacter !",
         "contact-detail":{
