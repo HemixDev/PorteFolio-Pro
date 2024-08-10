@@ -1,224 +1,334 @@
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    background-color: #1a1e20;
-    width: 100%;
-    font-size: 1.4rem;
+.body {
+    margin: 200px 0;
 }
 
-.about-title {
-    position: relative;
+.sub-title {
+    text-align: center;
+    font-size: 4.5rem;
+    padding-bottom: 70px;
+    padding-top: 30px;
 }
 
-.about-title h1 {
-    margin-top: 5rem;
-    padding: 0 30px;
-    font-size: 80px;
-    font-weight: 600;
-    text-shadow: 0 0 40px rgba(35, 166, 213, 0.3);
-
-}
-
-.about-section {
-    display: flex;
-    gap: 3rem;
-}
-
-.about-left {
-    margin: 0 5%;
-    width: 60%;
-}
-
-.about-left img {
-    width: 100%;
-    box-shadow: 50px;
-    border-radius: 10px;
-}
-
-.about-right {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-
-.about-para {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.about-skills li {
-    list-style: none;
-    margin: 4rem 0;
-}
-
-.skillbar {
-    position: relative;
-    width: 98%;
-    height: 15px;
-    border: 1px solid #fff;
-    padding: 3px;
-    margin-top: 10px;
-    border-radius: 50px;
-}
-
-.skillbar span {
-    display: block;
-    position: relative;
-    height: 100%;
-    border-radius: 10px;
-    background-image: linear-gradient(to right, #ee7752, #e73c7e);
-    width: 10%; /* état initial */
-}
-
-.html.animated span {
-    width: 80%;
-    animation: html 2s ease-in;
-}
-
-.react.animated span {
-    width: 50%;
-    animation: react 2s ease-in;
-}
-
-.node.animated span {
-    width: 40%;
-    animation: node 2s ease-in;
-}
-
-.mongo.animated span {
-    width: 60%;
-    animation: mongo 2s ease-in;
-}
-
-@keyframes html {
-    from {
-        width: 10%;
-    }
-    to {
-        width: 80%;
-    }
-}
-
-@keyframes react {
-    from {
-        width: 10%;
-    }
-    to {
-        width: 50%;
-    }
-}
-
-@keyframes node {
-    from {
-        width: 10%;
-    }
-    to {
-        width: 40%;
-    }
-}
-
-@keyframes mongo {
-    from {
-        width: 10%;
-    }
-    to {
-        width: 60%;
-    }
-}
-
-
-.about-achivements {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 80px;
-}
-
-.about-achivement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: 0.5s;
-}
-
-.about-achivement h1 {
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(270deg, #df8908 50.41%, #b41f55 90.25%);
+.sub-title span {
+    background: linear-gradient(to right, #e73c7e, #ee7752 );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0.5%;
 }
 
-.about-achivement p {
-    font-size: 22px;
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1{
+    width: 600px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 1.4rem;
+}
+
+.technical-bars .bar {
+    margin: 40px 0;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars i {
+    font-size: 2rem;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    from {
+        width: 0; 
+    }
+    to {
+        width: var(--progress); 
+    }
+}
+
+.technical-bars .bar .info span {
+    font-size: 1.5rem;
     font-weight: 500;
+    animation: showText 1s 1s linear forwards;
+    opacity: 0;
 }
 
-.about-skill:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
+.technical-bars .bar.animate .info span {
+    animation-play-state: running;
 }
 
-.about-achivement:hover {
-    transform: scale(1.12);
-    transition: 0.3s;
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+    --progress: 100%;
+    display: none;
 }
 
-@media(max-width: 768px) {
-    .about{
-        gap: 80px;
-        margin: 50px 70px;
-        align-items: start;
-    }
-    .about-title h1 {
-        font-size: 50px;
-        padding: 0;
-    }
-    .about-title img {
-        width: 130px;
-        right: -20px;
-    }
-    .about-section{
-        flex-direction: column;
-    }
-    .about-left{
-        display: none;
-    }
-    .about-para {
-        font-size: 18px;
-        line-height: 32px;
-    }
-    .about-skill {
-        gap: 20px;
-        align-items: center;
-    }
-    .about-skill p{
-        font-size: 20px;
-    }
-    .about-skill hr{
-        height: 6px;
-    }
-    .about-achivements{
-        justify-content: space-between;
-    }
-    .about-achivement{
-        gap: 10px;
-    }
-    .about-achivement h1{
-        font-size: 34px;
-        font-weight: 700;
-    }
-    .about-achivement p {
-        text-align: center;
-        font-size: 16px;
+.technical-bars .bar.animate .progress-line {
+    animation: animate 1s linear forwards;
+    display: block; 
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #23a6d5;
+    position: absolute;
+    border-radius: 10px;
+    width: 0; 
+}
+
+.technical-bars .bar.animate .progress-line span {
+    animation: animate 1s 1s linear forwards;
+    animation-play-state: running;
+}
+
+.progress-line.html5 span {
+    --progress: 78%;
+}
+.progress-line.css3 span {
+    --progress: 75%;
+}
+.progress-line.javascript span {
+    --progress: 45%;
+}
+.progress-line.react span {
+    --progress: 62%;
+}
+.progress-line.nodejs span {
+    --progress: 42%;
+}
+
+.progress-line span::after {
+    content: attr(data-content); 
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 2px 8px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    top: -35px; 
+    right: 0;
+    transform: translateX(50%);
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1;
+    opacity: 0; 
+}
+
+.technical-bars .bar.animate .progress-line span::after {
+    animation: showText 1s 1s cubic-bezier(0,0,1,0) forwards;
+}
+
+.progress-line.html5 span::after {
+    content: "78%";
+}
+.progress-line.css3 span::after {
+    content: "75%";
+}
+.progress-line.javascript span::after {
+    content: "45%";
+}
+.progress-line.react span::after {
+    content: "62%";
+}
+.progress-line.nodejs span::after {
+    content: "42%";
+}
+
+.progress-line span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -15px;
+    right: 0;
+    opacity: 0;
+}
+
+.technical-bars .bar.animate .progress-line span::before {
+    animation: showText 1s 1s cubic-bezier(0,0,1,0) forwards;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.technical-bars .bar.hidden .progress-line {
+    display: none;
+}
+
+
+
+.radial-bars {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 250px;
+    height: 250px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #23a6d5;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.hidden .progress-bar,
+.hidden .path {
+    display: none;
+}
+
+.radial-bars .radial-bar.animate .progress-bar {
+    animation: animate-bar 1s linear forwards;
+    display: block;
+}
+
+.radial-bars .radial-bar.animate .path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+    display: block;
+}
+
+.radial-bars .radial-bar.animate .path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+    display: block;
+}
+
+.radial-bars .radial-bar.animate .path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+    display: block;
+}
+
+.radial-bars .radial-bar.animate .path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+    display: block;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
     }
 }
 
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 165;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 251;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 90;
+    }
+}
+
+.radial-bars .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bars .radial-bar.animate .percentage {
+    animation-play-state: running;
+    opacity: 1;
+}
+
+.radial-bars .text {
+    font-size: 1.3rem;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bars .radial-bar.animate .text {
+    animation-play-state: running;
+    opacity: 1;
+}

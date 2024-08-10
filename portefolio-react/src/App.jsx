@@ -6,6 +6,7 @@ import Service from './Components/Service/Service'
 import MyWork from './Components/MyWork/MyWork'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import 'boxicons/css/boxicons.min.css'
 
 const App = () => {
   return (
